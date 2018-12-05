@@ -2,6 +2,8 @@
 
 An android library to make customisable floating animated toasts
 
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-FloatingToast-green.svg?style=flat)](https://android-arsenal.com/details/1/7350)
+
 ![Screenshots](https://media.giphy.com/media/ZxLbLvUt49O0WtLEuf/giphy.gif)
 
 ## Getting Started
