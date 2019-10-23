@@ -3,7 +3,6 @@ package hari.floatingtoastsample;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -11,6 +10,7 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import hari.floatingtoast.FloatingToast;
 
 public class SecondFragment extends Fragment {
@@ -37,62 +37,53 @@ public class SecondFragment extends Fragment {
 
         final Typeface customFont = Typeface.createFromAsset(getContext().getAssets(), "fonts/custom_font.ttf");
 
-        redOnTop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with red text and positioned at the touch location inside the view
-                //Duration of 1000 millis
-                //Fade out duration of 750 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - Off
-                //Custom font
-                FloatingToast.makeToast(redOnTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
-                        .setTextColor(Color.parseColor("#ff0000"))
-                        .setTextTypeface(customFont)
-                        .setTextSizeInDp(12)
-                        //Show toast at the touch location inside the view redOnTop
-                        .showAtTouchPosition(redOnTop);
-            }
+        redOnTop.setOnClickListener(v -> {
+            //Floating toast with red text and positioned at the touch location inside the view
+            //Duration of 1000 millis
+            //Fade out duration of 750 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - Off
+            //Custom font
+            FloatingToast.makeToast(redOnTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
+                    .setTextColor(Color.parseColor("#ff0000"))
+                    .setTextTypeface(customFont)
+                    .setTextSizeInDp(12)
+                    //Show toast at the touch location inside the view redOnTop
+                    .showAtTouchPosition(redOnTop);
         });
 
-        whiteOnTop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with White text and positioned at the touch location inside the view
-                //Duration of 1000 millis
-                //Fade out duration of 750 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - On
-                //Custom font
-                FloatingToast.makeToast(whiteOnTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
-                        .setTextColor(Color.parseColor("#ffffff"))
-                        .setTextTypeface(customFont)
-                        .setTextSizeInDp(12)
-                        .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
-                        .showAtTouchPosition(whiteOnTop);
-            }
+        whiteOnTop.setOnClickListener(v -> {
+            //Floating toast with White text and positioned at the touch location inside the view
+            //Duration of 1000 millis
+            //Fade out duration of 750 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - On
+            //Custom font
+            FloatingToast.makeToast(whiteOnTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
+                    .setTextColor(Color.parseColor("#ffffff"))
+                    .setTextTypeface(customFont)
+                    .setTextSizeInDp(12)
+                    .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
+                    .showAtTouchPosition(whiteOnTop);
         });
 
         final LinearLayout layout = view.findViewById(R.id.layout);
 
-        layout.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with blue text and positioned at the touch location inside the view
-                //Duration of 1000 millis
-                //Fade out duration of 750 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - Off
-                //Custom font
-                FloatingToast.makeToast(layout, "Hey I come wherever u touch", FloatingToast.LENGTH_MEDIUM)
-                        .setTextColor(Color.parseColor("#0000ff"))
-                        .setTextTypeface(customFont)
-                        .setTextSizeInDp(12)
-                        .showAtTouchPosition(layout);
-            }
+        layout.setOnClickListener(v -> {
+            //Floating toast with blue text and positioned at the touch location inside the view
+            //Duration of 1000 millis
+            //Fade out duration of 750 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - Off
+            //Custom font
+            FloatingToast.makeToast(layout, "Hey I come wherever u touch", FloatingToast.LENGTH_MEDIUM)
+                    .setTextColor(Color.parseColor("#0000ff"))
+                    .setTextTypeface(customFont)
+                    .setTextSizeInDp(12)
+                    .showAtTouchPosition(layout);
         });
 
 
