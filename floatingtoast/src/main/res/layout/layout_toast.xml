@@ -7,7 +7,7 @@
 
     <TextView
         android:id="@+id/blurViewRight"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -23,7 +23,7 @@
 
     <TextView
         android:id="@+id/blurViewLeft"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -39,7 +39,7 @@
 
     <TextView
         android:id="@+id/messageTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."

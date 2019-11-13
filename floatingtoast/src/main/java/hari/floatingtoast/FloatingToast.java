@@ -405,7 +405,7 @@ public class FloatingToast implements FloatingToastStyle{
                             int x = (int) event.getRawX();
                             int y = (int) event.getRawY() - actionBarSize;
 
-                            layoutParams.gravity = Gravity.TOP | Gravity.CENTER;
+                            layoutParams.gravity = Gravity.TOP | Gravity.LEFT;
                             layoutParams.x = x;
                             layoutParams.y = y;
 
