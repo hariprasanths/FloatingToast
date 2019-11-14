@@ -2,12 +2,11 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:layout_gravity="center"
     android:padding="8dp">
 
     <TextView
         android:id="@+id/blurViewRight"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -17,12 +16,11 @@
         android:shadowDy="4.0"
         android:shadowRadius="24"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        android:textAlignment="center"
         android:textSize="16dp" />
 
     <TextView
         android:id="@+id/blurViewLeft"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:textColor="@android:color/white"
@@ -32,16 +30,14 @@
         android:shadowDy="4.0"
         android:shadowRadius="24"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        android:textAlignment="center"
         android:textSize="16dp" />
 
     <TextView
         android:id="@+id/messageTextView"
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:text="Lorem Ipsum is simply dummy text of the printing and typesetting industry."
-        android:textAlignment="center"
         android:textSize="16dp" />
 
 </RelativeLayout>

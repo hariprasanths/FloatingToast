@@ -1,17 +1,15 @@
 package hari.floatingtoastsample;
 
-import android.app.Activity;
-import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.Typeface;
 import android.os.Bundle;
-import android.support.v4.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
 
+import androidx.fragment.app.Fragment;
 import hari.floatingtoast.FloatingToast;
 
 public class FirstFragment extends Fragment {
@@ -40,97 +38,85 @@ public class FirstFragment extends Fragment {
 
         final Typeface customFont = Typeface.createFromAsset(getContext().getAssets(), "fonts/custom_font.ttf");
 
-        whiteTop.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with white text
-                //Duration of 1250 millis
-                //Gravity - Mid Top                 (Default is Center)
-                //Fade out duration of 750 millis   (Default is 750 millis)
-                //Text size - 12dp                  (Default is 16dp)
-                //Float distance - 30px             (Default is 40px)
-                //Background blur - On              (Default is On)
-                //Text shadow - On                  (Default is Off)
-                //Custom font                       (No custom font is provided by default)
-                FloatingToast.makeToast(whiteTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_LONG)
-                        .setGravity(FloatingToast.GRAVITY_MID_TOP)
-                        .setFadeOutDuration(FloatingToast.FADE_DURATION_LONG)
-                        .setTextSizeInDp(12)
-                        .setBackgroundBlur(true)
-                        .setFloatDistance(FloatingToast.DISTANCE_SHORT)
-                        .setTextColor(Color.parseColor("#ffffff"))
-                        .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
-                        .setTextTypeface(customFont)
-                        .show();    //Show toast at the specified fixed position
-            }
+        whiteTop.setOnClickListener(v -> {
+            //Floating toast with white text
+            //Duration of 1250 millis
+            //Gravity - Mid Top                 (Default is Center)
+            //Fade out duration of 750 millis   (Default is 750 millis)
+            //Text size - 12dp                  (Default is 16dp)
+            //Float distance - 30px             (Default is 40px)
+            //Background blur - On              (Default is On)
+            //Text shadow - On                  (Default is Off)
+            //Custom font                       (No custom font is provided by default)
+            FloatingToast.makeToast(whiteTop, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_LONG)
+                    .setGravity(FloatingToast.GRAVITY_MID_TOP)
+                    .setFadeOutDuration(FloatingToast.FADE_DURATION_LONG)
+                    .setTextSizeInDp(12)
+                    .setBackgroundBlur(true)
+                    .setFloatDistance(FloatingToast.DISTANCE_SHORT)
+                    .setTextColor(Color.parseColor("#ffffff"))
+                    .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
+                    .setTextTypeface(customFont)
+                    .show();    //Show toast at the specified fixed position
         });
 
-        whiteCenter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with white text
-                //Gravity - Center
-                //Duration of 1000 millis
-                //Fade out duration of 750 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - On
-                //Custom font
-                FloatingToast.makeToast(whiteCenter, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
-                        .setGravity(FloatingToast.GRAVITY_CENTER)
-                        .setFadeOutDuration(FloatingToast.FADE_DURATION_MEDIUM)
-                        .setTextSizeInDp(12)
-                        .setBackgroundBlur(true)
-                        .setTextColor(Color.parseColor("#ffffff"))
-                        .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
-                        .setTextTypeface(customFont)
-                        .show();    //Show toast at the specified fixed position
-            }
+        whiteCenter.setOnClickListener(v -> {
+            //Floating toast with white text
+            //Gravity - Center
+            //Duration of 1000 millis
+            //Fade out duration of 750 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - On
+            //Custom font
+            FloatingToast.makeToast(whiteCenter, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
+                    .setGravity(FloatingToast.GRAVITY_CENTER)
+                    .setFadeOutDuration(FloatingToast.FADE_DURATION_MEDIUM)
+                    .setTextSizeInDp(12)
+                    .setBackgroundBlur(true)
+                    .setTextColor(Color.parseColor("#ffffff"))
+                    .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
+                    .setTextTypeface(customFont)
+                    .show();    //Show toast at the specified fixed position
         });
 
-        whiteBottom.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with white text
-                //Gravity - Mid Bottom
-                //Duration of 1000 millis
-                //Fade out duration of 750 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - On
-                //Custom font
-                FloatingToast.makeToast(whiteBottom, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
-                        .setGravity(FloatingToast.GRAVITY_MID_BOTTOM)
-                        .setFadeOutDuration(FloatingToast.FADE_DURATION_MEDIUM)
-                        .setTextSizeInDp(12)
-                        .setBackgroundBlur(true)
-                        .setTextColor(Color.parseColor("#ffffff"))
-                        .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
-                        .setTextTypeface(customFont)
-                        .show();    //Show toast at the specified fixed position
-            }
+        whiteBottom.setOnClickListener(v -> {
+            //Floating toast with white text
+            //Gravity - Mid Bottom
+            //Duration of 1000 millis
+            //Fade out duration of 750 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - On
+            //Custom font
+            FloatingToast.makeToast(whiteBottom, "Lorem ipsum dolor sit amet", FloatingToast.LENGTH_MEDIUM)
+                    .setGravity(FloatingToast.GRAVITY_MID_BOTTOM)
+                    .setFadeOutDuration(FloatingToast.FADE_DURATION_MEDIUM)
+                    .setTextSizeInDp(12)
+                    .setBackgroundBlur(true)
+                    .setTextColor(Color.parseColor("#ffffff"))
+                    .setShadowLayer(5, 1, 1, Color.parseColor("#000000"))
+                    .setTextTypeface(customFont)
+                    .show();    //Show toast at the specified fixed position
         });
 
-        redCenter.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                //Floating toast with red text
-                //Gravity - Center
-                //Duration of 750 millis
-                //Fade out duration of 1000 millis
-                //Text size - 12dp
-                //Background blur - On
-                //Text shadow - Off (Default is Off)
-                //Custom font
-                FloatingToast.makeToast(redCenter, "Lorem ipsum dolor sit amet", 750)
-                        .setGravity(FloatingToast.GRAVITY_CENTER)
-                        .setFadeOutDuration(1000)
-                        .setTextSizeInDp(12)
-                        .setBackgroundBlur(true)
-                        .setTextColor(Color.parseColor("#ff0000"))
-                        .setTextTypeface(customFont)
-                        .show();    //Show toast at the specified fixed position
-            }
+        redCenter.setOnClickListener(v -> {
+            //Floating toast with red text
+            //Gravity - Center
+            //Duration of 750 millis
+            //Fade out duration of 1000 millis
+            //Text size - 12dp
+            //Background blur - On
+            //Text shadow - Off (Default is Off)
+            //Custom font
+            FloatingToast.makeToast(redCenter, "Lorem ipsum dolor sit amet", 750)
+                    .setGravity(FloatingToast.GRAVITY_CENTER)
+                    .setFadeOutDuration(1000)
+                    .setTextSizeInDp(12)
+                    .setBackgroundBlur(true)
+                    .setTextColor(Color.parseColor("#ff0000"))
+                    .setTextTypeface(customFont)
+                    .show();    //Show toast at the specified fixed position
         });
 
 

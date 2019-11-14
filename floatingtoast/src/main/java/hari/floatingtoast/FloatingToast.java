@@ -11,8 +11,6 @@ import android.graphics.Rect;
 import android.graphics.Typeface;
 import android.os.Bundle;
 import android.os.Handler;
-import android.support.annotation.NonNull;
-import android.support.annotation.StringRes;
 import android.util.DisplayMetrics;
 import android.util.TypedValue;
 import android.view.Gravity;
@@ -23,6 +21,8 @@ import android.view.WindowManager;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import androidx.annotation.NonNull;
+import androidx.annotation.StringRes;
 import java.lang.ref.WeakReference;
 
 public class FloatingToast implements FloatingToastStyle{
@@ -179,13 +179,13 @@ public class FloatingToast implements FloatingToastStyle{
 
         switch (gravity) {
             case GRAVITY_MID_TOP:
-                layoutParams.gravity = Gravity.TOP | Gravity.LEFT;
+                layoutParams.gravity = Gravity.TOP | Gravity.CENTER;
                 layoutParams.y = midHeight.intValue();
                 dialog.getWindow().setAttributes(layoutParams);
                 break;
 
             case GRAVITY_MID_BOTTOM:
-                layoutParams.gravity = Gravity.BOTTOM | Gravity.LEFT;
+                layoutParams.gravity = Gravity.BOTTOM | Gravity.CENTER;
                 layoutParams.y = midHeight.intValue();
                 dialog.getWindow().setAttributes(layoutParams);
                 break;
@@ -614,7 +614,7 @@ public class FloatingToast implements FloatingToastStyle{
         new Handler().postDelayed(
                 new Runnable() {
                     public void run() {
-                        if(!activity.get().isDestroyed()) {
+                        if(!activity.get().isFinishing()) {
                             dismissDialog();
 
                             if (activity.get() != null)
