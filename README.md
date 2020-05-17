@@ -12,7 +12,7 @@ An android library to make customisable floating animated toasts
 
 ```groovy
 dependencies {
-    implementation 'hari.floatingtoast:floatingtoast:0.1.0'
+    implementation 'hari.floatingtoast:floatingtoast:0.1.1'
 }
 ```
 

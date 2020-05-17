@@ -239,8 +239,8 @@ public class FloatingToast implements FloatingToastStyle{
      *
      * @param color A color value in the form 0xAARRGGBB.
      * Do not pass a resource ID. To get a color value from a resource ID, call
-     * @link android.support.v4.content.ContextCompat#getColor(Context, int) getColor
-     * @attr ref android.R.styleable#TextView_textColor
+     * ref androidx.core.content.ContextCompat#getColor(Context, int) getColor
+     * ref android.R.styleable#TextView_textColor
      */
     @Override
     public FloatingToastStyle setTextColor(int color) {
@@ -255,9 +255,9 @@ public class FloatingToast implements FloatingToastStyle{
      * {@link #setTextStyle(int)} to get the appearance
      * that you actually want.
      *
-     * @attr ref android.R.styleable#TextView_fontFamily
-     * @attr ref android.R.styleable#TextView_typeface
-     * @attr ref android.R.styleable#TextView_textStyle
+     * ref android.R.styleable#TextView_fontFamily
+     * ref android.R.styleable#TextView_typeface
+     * ref android.R.styleable#TextView_textStyle
      */
     @Override
     public FloatingToastStyle setTextTypeface(Typeface typeface) {
@@ -276,8 +276,8 @@ public class FloatingToast implements FloatingToastStyle{
      * Available options - {@link #STYLE_NORMAL}, {@link #STYLE_BOLD},
      *                     {@link #STYLE_ITALIC}, {@link #STYLE_BOLD_ITALIC}
      *
-     * @attr ref android.R.styleable#TextView_typeface
-     * @attr ref android.R.styleable#TextView_textStyle
+     * ref android.R.styleable#TextView_typeface
+     * ref android.R.styleable#TextView_textStyle
      */
     @Override
     public FloatingToastStyle setTextStyle(int style) {
@@ -295,7 +295,7 @@ public class FloatingToast implements FloatingToastStyle{
      *
      * @param sizeInSp The scaled pixel size.
      *
-     * @attr ref android.R.styleable#TextView_textSize
+     * ref android.R.styleable#TextView_textSize
      */
     @Override
     public FloatingToastStyle setTextSizeInSp(float sizeInSp) {
@@ -310,7 +310,7 @@ public class FloatingToast implements FloatingToastStyle{
      * @param sizeInDp The density independent pixel size.
      *                 Default is 16dp.
      *
-     * @attr ref android.R.styleable#TextView_textSize
+     * ref android.R.styleable#TextView_textSize
      */
     @Override
     public FloatingToastStyle setTextSizeInDp(float sizeInDp) {
@@ -325,7 +325,7 @@ public class FloatingToast implements FloatingToastStyle{
      * @param unit The desired dimension unit.
      * @param size The desired size in the given units.
      *
-     * @attr ref android.R.styleable#TextView_textSize
+     * ref android.R.styleable#TextView_textSize
      */
     @Override
     public FloatingToastStyle setTextSizeCustomUnit(int unit, float size) {
@@ -354,10 +354,10 @@ public class FloatingToast implements FloatingToastStyle{
      * {@link View#getElevation() elevation} and
      * {@link View#getTranslationZ() translationZ}.
      *
-     * @attr ref android.R.styleable#TextView_shadowColor
-     * @attr ref android.R.styleable#TextView_shadowDx
-     * @attr ref android.R.styleable#TextView_shadowDy
-     * @attr ref android.R.styleable#TextView_shadowRadius
+     * ref android.R.styleable#TextView_shadowColor
+     * ref android.R.styleable#TextView_shadowDx
+     * ref android.R.styleable#TextView_shadowDy
+     * ref android.R.styleable#TextView_shadowRadius
      */
     @Override
     public FloatingToastStyle setShadowLayer(float shadowRadius, float shadowDx, float shadowDy, int shadowColor) {
