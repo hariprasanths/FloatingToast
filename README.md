@@ -10,6 +10,14 @@ An android library to make customisable floating animated toasts
 
 #### In your build.gradle
 
+Maven Central
+```groovy
+dependencies {
+    implementation 'io.github.hariprasanths:floating-toast:0.1.1'
+}
+```
+
+jcenter
 ```groovy
 dependencies {
     implementation 'hari.floatingtoast:floatingtoast:0.1.1'

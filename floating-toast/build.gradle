@@ -1,0 +1,69 @@
+apply plugin: 'com.android.library'
+
+ext {
+    bintrayRepo = 'maven'
+    bintrayName = 'floating-toast'
+
+    publishedGroupId = 'io.github.hariprasanths'
+    libraryName = 'floating-toast'
+    artifact = 'floating-toast'
+
+    libraryDescription = 'Customizable floating animation for toasts android'
+
+    siteUrl = 'https://github.com/hariprasanths/FloatingToast'
+    gitUrl = 'https://github.com/hariprasanths/FloatingToast.git'
+
+    libraryVersion = '0.1.1'
+
+    developerId = 'hariprasanths'
+    developerName = 'Hariprasanth S'
+    developerEmail = 'shhariprasanth@gmail.com'
+
+    licenseName = 'The Apache Software License, Version 2.0'
+    licenseUrl = 'http://www.apache.org/licenses/LICENSE-2.0.txt'
+    allLicenses = ["Apache-2.0"]
+
+    PUBLISH_GROUP_ID = publishedGroupId
+    PUBLISH_VERSION = libraryVersion
+    PUBLISH_ARTIFACT_ID = libraryName
+}
+
+apply from: "${rootProject.projectDir}/scripts/publish-module.gradle"
+
+android {
+    compileSdkVersion 30
+
+    defaultConfig {
+        minSdkVersion 14
+        targetSdkVersion 30
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility = 1.8
+        targetCompatibility = 1.8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+
+    implementation 'androidx.appcompat:appcompat:1.2.0'
+    implementation "androidx.annotation:annotation:1.2.0"
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'androidx.test:runner:1.3.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
+}
+
+group = publishedGroupId // Maven Group ID for the artifact
+version = libraryVersion
